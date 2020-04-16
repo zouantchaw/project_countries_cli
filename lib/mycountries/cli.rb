@@ -65,33 +65,6 @@ class Cli
         puts "---------------------------------------"
     end 
 
-=begin 
-    #Find a way to clean this shit up, how can I add this shit to the print_country_info method?
-    def print_country_info_from_list(country) 
-        Api.get_country_info(@x)
-        puts " "
-        puts "Here is more information on #{@x.upcase}:"
-        #Api.get_country_info(@country)
-        country.each do |x|
-            puts "---------------------------------------"
-            puts " "
-            puts "Capital: #{x.capital}"
-            puts " "
-            puts "Population: #{add_commas(x.population.to_s)}"  
-            puts " "
-            puts "Language(s): #{x.language}"
-            puts " "
-            puts "Currency: #{x.currency} (#{x.symbol})"
-            puts " "
-            puts "Region: #{x.region}"
-            puts " "
-            puts "Sub-region: #{x.sub_region}"
-            puts " "
-            puts "---------------------------------------"
-        end 
-    end 
-=end 
-
     def list_prompt 
         puts " "
         puts "select a number to get more info on that country, type 'list' to see the list again, or 'exit' to exit "
