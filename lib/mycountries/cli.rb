@@ -11,10 +11,9 @@ class Cli
         @country = gets.strip.downcase
         if @country == "list"
             print_list
-            #list_prompt
-            #input = gets.strip.downcase
+        elsif @country == "exit"
+            exit 
         else
-            #Api.get_country_info(@country)  -- Moved this inside the print_country_info method. 
             print_country_info
         end 
 
@@ -63,6 +62,7 @@ class Cli
         puts "Sub-region: #{@country_object.sub_region}"
         puts " "
         puts "---------------------------------------"
+        run 
     end 
 
     def list_prompt 
