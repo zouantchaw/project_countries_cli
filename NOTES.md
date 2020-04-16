@@ -18,3 +18,8 @@ end
 if Country.list[0][input - 1] == Country.find_by_name(Country.list[0][input - 1])
  print_country_info()
 end 
+
+--------------------------------------------------------------------------------------------
+Add exit to the menu 
+
+Figure out the loop 
