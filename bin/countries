@@ -1,0 +1,8 @@
+#Executable file: The file that you run which runs the entire project.
+
+#!/usr/bin/env ruby 
+
+
+require_relative '../lib/environment'
+
+Cli.new.run 
