@@ -23,7 +23,7 @@ class Cli
         Country::COUNTRIES_LIST << Api.get_country_list if Country::COUNTRIES_LIST.length == 0
         puts " "
         puts "Enter a name of a country to get more information about it."
-        puts "..Enter 'list' to view a list of all the countries IN THE WORLD."      
+        puts "..Enter 'list' to SELECT a list of all the countries IN THE WORLD."      
         puts "...Or Enter 'exit' to exit! "
         puts " "
         @country = gets.strip.downcase
