@@ -92,6 +92,12 @@ class Cli
         prompt 
     end 
 
+    def error  
+        puts "I do not understand- please try again"
+        puts " "
+        prompt  
+    end 
+
 
 
     def add_commas(num_string)
