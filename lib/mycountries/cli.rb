@@ -2,12 +2,8 @@
 
 class Cli
     def run 
-        @xyz = 0
-        while @xyz < 1
         puts " "
-        puts "Hello and welcome to my COUNTRIES APP!"
-        @xyz += 1
-        end
+        puts "Hello and welcome to my COUNTRIES APP!" if 
         puts " "
         puts "Enter a name of a country to get more information about it."
         puts "...Or Enter 'list' to view a list of all the countries IN THE WORLD."
@@ -72,9 +68,10 @@ class Cli
         run 
     end 
 
-    def list_prompt 
+    def prompt 
         puts " "
-        puts "select a number to get more info on that country, type 'list' to see the list again, or 'exit' to exit "
+        puts "Enter a name of a country to get more information about it."
+        puts "...Or Enter 'list' to view a list of all the countries IN THE WORLD."      
         puts " "
     end 
 
