@@ -4,7 +4,7 @@ class Cli
     def run 
         Country::COUNTRIES_LIST << Api.get_country_list if Country::COUNTRIES_LIST.length == 0
         puts " "
-        puts "Hello and welcome to my COUNTRIES APP!" 
+        puts "Hello and welcome to my COUNTRIES APP!" #if Country::COUNTRIES_LIST.length > 1
         puts " "
         puts "Enter a name of a country to get more information about it."
         puts "...Or Enter 'list' to SELECT from a list of all the countries IN THE WORLD."
@@ -15,9 +15,7 @@ class Cli
         elsif Country.list[0].include?(@country.capitalize)
             print_country_info
         else
-            puts "I do not understand- please try again"
-            puts " "
-            prompt  
+            error
         end 
     end 
 
@@ -43,9 +41,7 @@ class Cli
         elsif Country.list[0].include?(@country.capitalize)
             print_country_info
         else
-            puts "I do not understand- please try again"
-            puts " "
-            prompt        
+            error
         end
     end 
 
@@ -93,7 +89,8 @@ class Cli
     end 
 
     def error  
-        puts "I do not understand- please try again"
+        puts "---------------------------------------"
+        puts "I do not understand- please try again:"
         puts " "
         prompt  
     end 
