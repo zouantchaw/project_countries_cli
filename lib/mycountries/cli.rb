@@ -2,33 +2,19 @@
 
 class Cli
     def run 
+        puts " "
+        puts "Hello and welcome to my COUNTRIES APP!" if Country::COUNTRIES_LIST.length == 0
         Country::COUNTRIES_LIST << Api.get_country_list if Country::COUNTRIES_LIST.length == 0
         puts " "
-        puts "Hello and welcome to my COUNTRIES APP!" #if Country::COUNTRIES_LIST.length > 1
-        puts " "
         puts "Enter a name of a country to get more information about it."
-        puts "...Or Enter 'list' to SELECT from a list of all the countries IN THE WORLD."
+        puts "..Or Enter 'list' to SELECT from a list of all the countries IN THE WORLD."
+        puts "...Or Enter 'exit' to exit! "
         puts " "
         @country = gets.strip.downcase
         if @country == "list"
             print_list
         elsif Country.list[0].include?(@country.capitalize)
             print_country_info
-        else
-            error
-        end 
-    end 
-
-    def prompt 
-        Country::COUNTRIES_LIST << Api.get_country_list if Country::COUNTRIES_LIST.length == 0
-        puts " "
-        puts "Enter a name of a country to get more information about it."
-        puts "..Enter 'list' to SELECT a list of all the countries IN THE WORLD."      
-        puts "...Or Enter 'exit' to exit! "
-        puts " "
-        @country = gets.strip.downcase
-        if @country == 'list'
-            print_list
         elsif @country == 'exit'
             puts "---------------------------------------"
             puts " "
@@ -38,12 +24,11 @@ class Cli
             puts " "
             puts "---------------------------------------"
             exit
-        elsif Country.list[0].include?(@country.capitalize)
-            print_country_info
         else
             error
-        end
+        end 
     end 
+
 
     def print_list 
         Country::COUNTRIES_LIST << Api.get_country_list if Country::COUNTRIES_LIST.length == 0
@@ -85,14 +70,14 @@ class Cli
         puts "Sub-region: #{@country_object.sub_region}"
         puts " "
         puts "---------------------------------------"
-        prompt 
+        run 
     end 
 
     def error  
         puts "---------------------------------------"
         puts "I do not understand- please try again:"
         puts " "
-        prompt  
+        run  
     end 
 
 
