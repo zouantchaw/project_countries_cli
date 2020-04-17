@@ -26,13 +26,21 @@ class Cli
         if @country == 'list'
             print_list
         elsif @country == 'exit'
+            puts "---------------------------------------"
+            puts " "
+            puts "Thanks for using my APP:)"
             puts " "
             puts "Bye!"
+            puts " "
+            puts "---------------------------------------"
             exit
-        elsif @country == Country::COUNTRIES_LIST.any? {|x| x.downcase == @country.downcase}
-            puts "I do not understand- please try again"
-        else
+        elsif @country == Country::COUNTRIES_LIST.filter {|x| x.downcase == @country.downcase}.join 
+            binding.pry
             print_country_info
+        else
+            puts "I do not understand- please try again"
+            puts " "
+            prompt        
         end
     end 
 
