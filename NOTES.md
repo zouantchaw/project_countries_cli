@@ -25,3 +25,15 @@ Add exit to the menu
 Figure out the loop 
 
 Add Feature that asks user to submit a new input if input isnt recognzed.
+
+
+
+
+
+Today I will be working on the loop for my CLI app. I've already build out most of the functionalities fo the app, I was not aware that we had to make a 30 min video of us coding our project. So my apologies for that. 
+
+Like I said I;ll be working on the loop that will add interactivity to my app. I'm currenty just calling different methods to make it seem like its a loop, but that I need to a better way to abstract that. So I think I loop will be perfect. 
+
+So let me run my app right now to show you guys what I have so far. I hope you guys can see my terminal screen to the right >
+
+As you can see, the core functionalities are working, but the user is recieving the same prompt as when they first started the app. That what I will be working on today. I'm going to keep this video at around 30 minutes so lets hope I can get it done by then.....haha 
