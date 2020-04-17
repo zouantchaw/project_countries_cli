@@ -23,3 +23,5 @@ end
 Add exit to the menu 
 
 Figure out the loop 
+
+Add Feature that asks user to submit a new input if input isnt recognzed.
