@@ -2,8 +2,12 @@
 
 class Cli
     def run 
+        @xyz = 0
+        while @xyz < 1
         puts " "
         puts "Hello and welcome to my COUNTRIES APP!"
+        @xyz += 1
+        end
         puts " "
         puts "Enter a name of a country to get more information about it."
         puts "...Or Enter 'list' to view a list of all the countries IN THE WORLD."
@@ -12,7 +16,10 @@ class Cli
         if @country == "list"
             print_list
         elsif @country == "exit"
+            puts " "
+            puts "Bye!"
             exit 
+            # Add a elsif for the event that a user doesnt enter 'list' , 'exit', or a country name.
         else
             print_country_info
         end 
