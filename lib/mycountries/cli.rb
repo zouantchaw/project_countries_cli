@@ -7,13 +7,17 @@ class Cli
         puts "Hello and welcome to my COUNTRIES APP!" 
         puts " "
         puts "Enter a name of a country to get more information about it."
-        puts "...Or Enter 'list' to view a list of all the countries IN THE WORLD."
+        puts "...Or Enter 'list' to SELECT from a list of all the countries IN THE WORLD."
         puts " "
         @country = gets.strip.downcase
         if @country == "list"
             print_list
-        else
+        elsif Country.list[0].include?(@country.capitalize)
             print_country_info
+        else
+            puts "I do not understand- please try again"
+            puts " "
+            prompt  
         end 
     end 
 
@@ -30,7 +34,7 @@ class Cli
         elsif @country == 'exit'
             puts "---------------------------------------"
             puts " "
-            puts "Thanks for using my APP:)"
+            puts "Thank you for using my APP:)"
             puts " "
             puts "Bye!"
             puts " "
@@ -47,7 +51,6 @@ class Cli
 
     def print_list 
         Country::COUNTRIES_LIST << Api.get_country_list if Country::COUNTRIES_LIST.length == 0
-        binding.pry
         puts " "
         puts "Here is a list of all 250 countries. Type in a number to get more info on that country."
         puts "---------------------------------------"
