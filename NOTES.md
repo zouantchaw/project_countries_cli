@@ -37,3 +37,7 @@ Like I said I;ll be working on the loop that will add interactivity to my app. I
 So let me run my app right now to show you guys what I have so far. I hope you guys can see my terminal screen to the right >
 
 As you can see, the core functionalities are working, but the user is recieving the same prompt as when they first started the app. That what I will be working on today. I'm going to keep this video at around 30 minutes so lets hope I can get it done by then.....haha 
+
+If theres nothing happening, it just means im trying to think it through. Right now I am trying to figure out a way to insert my prompt method into my run method. 
+
+Also, I did not know that we had to do 30 commits thought the project. Just found out yesterday, So I will be doing a lot of unecessary commits to github.... oops. 
