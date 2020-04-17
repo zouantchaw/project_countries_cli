@@ -3,7 +3,7 @@
 class Cli
     def run 
         puts " "
-        puts "Hello and welcome to my COUNTRIES APP!" if 
+        puts "Hello and welcome to my COUNTRIES APP!" 
         puts " "
         puts "Enter a name of a country to get more information about it."
         puts "...Or Enter 'list' to view a list of all the countries IN THE WORLD."
@@ -11,16 +11,29 @@ class Cli
         @country = gets.strip.downcase
         if @country == "list"
             print_list
-        elsif @country == "exit"
-            puts " "
-            puts "Bye!"
-            exit 
-            # Add a elsif for the event that a user doesnt enter 'list' , 'exit', or a country name.
         else
             print_country_info
         end 
+    end 
 
-        
+    def prompt 
+        puts " "
+        puts "Enter a name of a country to get more information about it."
+        puts "..Enter 'list' to view a list of all the countries IN THE WORLD."      
+        puts "...Or Enter 'exit' to exit! "
+        puts " "
+        @country = gets.strip.downcase
+        if @country == 'list'
+            print_list
+        elsif @country == 'exit'
+            puts " "
+            puts "Bye!"
+            exit
+        elsif @country == Country::COUNTRIES_LIST.any? {|x| x.downcase == @country.downcase}
+            puts "I do not understand- please try again"
+        else
+            print_country_info
+        end
     end 
 
     def print_list 
@@ -65,15 +78,10 @@ class Cli
         puts "Sub-region: #{@country_object.sub_region}"
         puts " "
         puts "---------------------------------------"
-        run 
+        prompt 
     end 
 
-    def prompt 
-        puts " "
-        puts "Enter a name of a country to get more information about it."
-        puts "...Or Enter 'list' to view a list of all the countries IN THE WORLD."      
-        puts " "
-    end 
+
 
     def add_commas(num_string)
         #Gives commas to a string of intgers, then converts that string into an integer. 
