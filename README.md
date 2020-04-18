@@ -1,6 +1,7 @@
 # COUNTRIES CLI APP
 
 This program was created to help people get quick access to basic information such as capital, population, language(s), currency, region, and sub-region on any country in the world. 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -39,7 +40,7 @@ You can enter a name of a country if you already have one in mind. You can enter
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/zouantchaw/project_countries_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zouantchaw/nyt_bestsellers_cli/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/zouantchaw/project_countries_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zouantchaw/project_countries_cli/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
