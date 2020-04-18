@@ -1,4 +1,3 @@
-
 # COUNTRIES CLI APP
 
 This program was created to help people get quick access to basic information such as capital, population, language(s), currency, region, and sub-region on any country in the world. 
