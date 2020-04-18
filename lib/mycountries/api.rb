@@ -18,5 +18,6 @@ class Api
         languages = parsed_response["languages"].map {|l| l["name"]}.join(", ")
         Country.new(name: parsed_response["name"], capital: parsed_response["capital"], region: parsed_response["region"], sub_region: parsed_response["subregion"], population: parsed_response["population"], language: languages, currency: currencies, symbol: currency_symbol)
     end 
+    
 end 
 
