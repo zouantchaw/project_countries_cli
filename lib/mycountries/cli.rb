@@ -30,7 +30,6 @@ class Cli
 
 
     def print_list 
-        Country::COUNTRIES_LIST << Api.get_country_list if Country::COUNTRIES_LIST.length == 0
         puts " "
         puts "Here is a list of all 250 countries. Type in a number to get more info on that country."
         puts "---------------------------------------"
@@ -86,4 +85,5 @@ class Cli
         #So if you want to pass in a number you first have to convert it into a string using to_s.
         num_string.reverse.scan(/\d{3}|.+/).join(",").reverse
     end 
+    
 end 
