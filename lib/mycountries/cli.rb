@@ -59,7 +59,7 @@ class Cli
         puts " "
         puts "Capital: #{@country_object.capital}"
         puts " "
-        puts "Population: #{add_commas(@country_object.population.to_s)}" #Here I had to turn @country_object.population into a string for add_commas method to work.
+        puts "Population: #{add_commas(@country_object.population.to_s)}" 
         puts " "
         puts "Language(s): #{@country_object.language}"
         puts " "
