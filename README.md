@@ -35,6 +35,8 @@ Enter a name of a country to get more information about it.
 ...Or Enter 'exit' to exit! 
 ```
 
+You can enter a name of a country if you already have one in mind. You can enter 'list' to get a list of all the countries in the world, and select the country you want more information on. Lastly, you can enter 'exit' to exit the application.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/zouantchaw/project_countries_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/zouantchaw/nyt_bestsellers_cli/blob/master/CODE_OF_CONDUCT.md).
