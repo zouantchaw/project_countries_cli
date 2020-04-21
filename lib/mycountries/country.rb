@@ -32,9 +32,4 @@ class Country
         @@all.select {|c| c.name == name.capitalize}
     end 
 
-    def self.print_by_name(name)
-        if @@all.select {|c| c.name == name.capitalize}
-            
-        end 
-    end 
 end 
