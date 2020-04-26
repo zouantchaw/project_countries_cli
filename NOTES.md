@@ -41,3 +41,13 @@ As you can see, the core functionalities are working, but the user is recieving 
 If theres nothing happening, it just means im trying to think it through. Right now I am trying to figure out a way to insert my prompt method into my run method. 
 
 Also, I did not know that we had to do 30 commits thought the project. Just found out yesterday, So I will be doing a lot of unecessary commits to github.... oops. 
+
+--------------------------------------------------------------------------------------------
+#Post Assesment Refactoring 
+
+# remove the COUNTRIES_LIST class constant from the Country class, and instead just use `@@all`
+    # some items to consider:
+    # - when you initially get the list country names, instantiate the countries
+    # - ...which means when you get the details for a country, you'll need to find it in the @@all array and update it
+    # - you could build a class method in your Country class that returns an array of just the country names
+    # Do you best to keep SRP & SOC in mind - Single Responsibility Principle & Separation of Concerns - each method should have one job, each class should be concerned with one main thing

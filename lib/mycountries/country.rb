@@ -2,7 +2,6 @@ class Country
     attr_accessor :name, :capital, :region, :sub_region, :population, :language, :currency, :symbol
 
     @@all = []
-    COUNTRIES_LIST = []
 
     def initialize(name:, capital:, region:, sub_region:, population:, language:, currency:, symbol:)
         @name = name 
@@ -24,9 +23,15 @@ class Country
         @@all
     end
 
-    def self.list
-        COUNTRIES_LIST
+    def self.countries_list
+        array = @@all.collect { |country| country.name} 
+        array
     end 
+
+    def self.print_country(name)
+        object = @@all.detect { |x| x.name == name}
+    end 
+
 
     def self.find_by_name(name)
         @@all.select {|c| c.name == name.capitalize}
