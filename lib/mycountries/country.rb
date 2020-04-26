@@ -28,7 +28,7 @@ class Country
         array
     end 
 
-    def self.print_country(name)
+    def self.get_country(name)
         object = @@all.detect { |x| x.name == name}
     end 
 

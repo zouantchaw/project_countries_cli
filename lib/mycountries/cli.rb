@@ -46,7 +46,7 @@ class Cli
     end 
 
     def print_country_info 
-        @country_object = Country.print_country(@country.capitalize)
+        @country_object = Country.get_country(@country.capitalize)
         puts " "
         puts "Here is more information on #{@country_object.name.upcase}:"
         puts " "
